@@ -22,7 +22,7 @@ public class MenuItemService {
         System.out.println("item "+item.getItemName()+" successfully saved!");
     }
 
-    public MenuItem getItemByName(int id){
+    public MenuItem getItemByID(int id){
         MenuItem concreteItem;
         Optional<MenuItem> optionalItem = itemRepo.findById(id);
         if(optionalItem.isPresent()){

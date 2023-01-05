@@ -23,8 +23,14 @@ public class OrderService {
 
     }
 
-    public Optional<Order> getOrderByID(int id){
+    public Order getOrderByID(int id){
         Optional<Order> order = orderRepo.findById(id);
-        return order;
+        Order concreteOrder;
+        if (order.isPresent()){
+            concreteOrder=order.get();
+            return concreteOrder;
+        }
+        System.out.println("order not found...");
+        return null;
     }
 }

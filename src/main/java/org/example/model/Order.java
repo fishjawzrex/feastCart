@@ -19,8 +19,9 @@ public class Order {
 
     private int userID;
     private float totalPrice;
-    @OneToMany
+//    @OneToMany
 //    @JsonManagedReference
+    @ElementCollection
     private List<MenuItem> orderList;
     private int totalCalories;
     private boolean orderReady;

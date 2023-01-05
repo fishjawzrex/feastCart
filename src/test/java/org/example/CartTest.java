@@ -21,14 +21,15 @@ public class CartTest {
     @Test
     public void testOrderInsert(){
         List<MenuItem> items= new ArrayList<>();
-        items.add(menuServ.getItemByName(13));
+        items.add(menuServ.getItemByID(27));
+        items.add(menuServ.getItemByID(28));
         float totalPrice = 0;
         int totalCalories =0;
         for (MenuItem item:items){
             totalPrice+=item.getPrice();
             totalCalories+=item.getCalories();
         }
-        Order order = new Order(LocalDateTime.now(),10,totalPrice,items,totalCalories,false);
+        Order order = new Order(LocalDateTime.now(),11,totalPrice,items,totalCalories,false);
         try {
             orderServ.saveOrder(order);
         } catch (Exception e) {

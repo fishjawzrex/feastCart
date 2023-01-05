@@ -27,7 +27,11 @@ public class MenuItemTest {
 //            System.out.println("no such order!");
 //            return;
 //        }
-        MenuItem item = new MenuItem("Cheese Burger",false,3500,25,true);
-        itemRepo.save(item);
+        try {
+            MenuItem item = new MenuItem("Salad4",true,1500,32,true);
+            itemRepo.save(item);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
