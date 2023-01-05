@@ -20,7 +20,7 @@ public class Order {
     private int userID;
     private float totalPrice;
     @OneToMany
-    @JsonManagedReference
+//    @JsonManagedReference
     private List<MenuItem> orderList;
     private int totalCalories;
     private boolean orderReady;
@@ -46,6 +46,27 @@ public class Order {
     public int getOrderID() {
         return orderID;
     }
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public float getTotalPrice() {
+        return totalPrice;
+    }
+
+    public int getTotalCalories() {
+        return totalCalories;
+    }
+
+    public boolean isOrderReady() {
+        return orderReady;
+    }
+
     public void setOrderID(int orderID) {
         this.orderID = orderID;
     }
