@@ -6,7 +6,9 @@ import org.example.repo.OrderRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class OrderService {
@@ -21,6 +23,15 @@ public class OrderService {
             throw new RuntimeException(e);
         }
 
+    }
+
+    public List<Order> getAllOrders(){
+        try {
+            List<Order> resSet= orderRepo.findAll();
+            return resSet;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public Order getOrderByID(int id){

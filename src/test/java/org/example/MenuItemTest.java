@@ -28,7 +28,7 @@ public class MenuItemTest {
 //            return;
 //        }
         try {
-            MenuItem item = new MenuItem("Salad4",true,1500,32,true);
+            MenuItem item = new MenuItem("pepsi",true,1000,13,true);
             itemRepo.save(item);
         } catch (Exception e) {
             throw new RuntimeException(e);

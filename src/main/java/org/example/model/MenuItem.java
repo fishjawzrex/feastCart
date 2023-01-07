@@ -14,7 +14,32 @@ public class MenuItem {
     boolean veg;
     int calories;
     float price;
+    int kitchenID;
     private boolean isAvailable;
+
+//    @ManyToOne
+//    @JoinColumn(name = "order_order_id")
+//    private Order order;
+
+//    public Order getOrder() {
+//        return order;
+//    }
+//
+//    public void setOrder(Order order) {
+//        this.order = order;
+//    }
+
+    public int getItemID() {
+        return itemID;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public boolean isVeg() {
+        return veg;
+    }
 
     public MenuItem() {
     }
@@ -50,4 +75,11 @@ public class MenuItem {
         return itemName;
     }
 
+    public int getKitchenID() {
+        return kitchenID;
+    }
+
+    public void setKitchenID(int kitchenID) {
+        this.kitchenID = kitchenID;
+    }
 }
